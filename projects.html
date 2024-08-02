@@ -15,26 +15,6 @@
         .font-family-karla {
             font-family: karla;
         }
-
-        .card {
-        /* Add shadows to create the "card" effect */
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        }
-
-        /* On mouse-over, add a deeper shadow */
-        .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-
-        /* Add some padding inside the card container */
-        .container {
-        padding: 2px 16px;
-        }
-
-        #more {
-            display: none;
-        }
     </style>
 
     <!-- AlpineJS -->
@@ -102,82 +82,20 @@
                 Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
             </a>
         </div>
-        <!-- <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <!-- <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="hover:bg-green-300 rounded py-2 px-4 mx-2">S23 - Data Analyst @ Telus</a>
+            </div> -->
             <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">software development</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">data analytics</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">business intelligence</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">consulting</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">product management</a>
-                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">research</a>
+                <a href="#" class="hover:bg-yellow-400 rounded py-2 px-4 mx-2">Data Analytics</a>
             </div>
-        </div> -->
-
-        <!-- <div class="card">
-            <img src="images/remai.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
-            </div>
-        </div> -->
-
+        </div>
     </nav>
 
-
-    <!-- <header class="w-full container mx-auto flex flex-col  py-12 ">
-        <p>Here is where I will showcase my projects<span id="dots">...</span><span id="more"><br><br>I am interested in Data Analytics & Business Intelligence, Software Development, Consulting, and Product Management</span></p>
-        <button onclick="myFunction()" id="myBtn">Read more</button>
-    </header> -->
-
-    
-
-    <footer class="w-full border-t bg-white pb-12">
-        <div
-            class="relative w-full flex items-center invisible md:visible md:pb-12"
-            x-data="getCarouselData()"
-        >
-            <!-- <button
-                class="absolute bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 ml-12"
-                x-on:click="decrement()">
-                &#8592;
-            </button> -->
-            <template x-for="image in images.slice(currentIndex, currentIndex + 6)" :key="images.indexOf(image)">
-                <img class="w-1/6 hover:opacity-75" :src="image">
-            </template>
-            <!-- <button
-                class="absolute right-0 bg-blue-800 hover:bg-blue-700 text-white text-2xl font-bold hover:shadow rounded-full w-16 h-16 mr-12"
-                x-on:click="increment()">
-                &#8594;
-            </button> -->
-        </div>
-        <div class="w-full container mx-auto flex flex-col items-center">
-            <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
-                <!-- <a href="#" class="uppercase px-3">About Us</a>
-                <a href="#" class="uppercase px-3">Privacy Policy</a>
-                <a href="#" class="uppercase px-3">Terms & Conditions</a>
-                <a href="#" class="uppercase px-3">Contact Us</a> -->
-            </div>
-            <!-- <div class="uppercase pb-6">&copy; contact me: Molinuofg@gmail.com</div> -->
-        </div>
+    <footer class="w-full border-t bg-white pb-12">        
+        <div class="relative w-full container mx-auto flex flex-col items-center uppercase pb-6 "><br>&copy; contact me: Molinuofg@gmail.com</div>
     </footer>
 
-    <script>
-        function myFunction() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("myBtn");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btnText.innerHTML = "Read more";
-                moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "Read less";
-                moreText.style.display = "inline";
-            }
-        }
-    </script>
 
 </body>
 </html>
