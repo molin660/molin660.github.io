@@ -1,5 +1,5 @@
-# molin660.github.io
-Molin's personal portfolio website
+# [molin660.github.io](https://molin660.github.io/home.html)
+Molin's personal portfolio website: 
 
 # About
 online portfolio containing my education, work experience, skills, resume, contact info, and more!
