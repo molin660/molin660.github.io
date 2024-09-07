@@ -19,7 +19,7 @@
         /* Three image containers (use 25% for four, and 50% for two, etc) */
         .column {
             float: left;
-            /* align-items: center; */
+            align-items: center;
             display: flex;
             /* position: relative; */
             /* width: 50%; */
@@ -40,6 +40,57 @@
         clear: both;
         display: table;
         }
+
+
+        .image-container {
+            display: flex;
+            justify-content: space-between; /* optional: to add space between images */
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom:20px;
+            margin-top:50px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            height: 400px; 
+            width: auto; 
+        }
+
+
+        .image-row {
+            display: grid;
+            grid-template-columns: repeat(3, 300px); /* Create 3 columns of fixed width */
+            gap: 10px; /* Optional: Adjust spacing between images */
+        }
+
+        .image-row img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        
+
+        .image-container2 {
+            position: relative;
+            width: auto; /* Let the width be dynamic */
+            height: 400px; /* Set a fixed height for all images */
+            overflow: hidden;
+            justify-content: space-between; /* optional: to add space between images */
+        }
+
+        .image-container2 img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 100%; /* Set the height of the image to fill the container */
+            width: 100%; /* Allow the width to maintain the aspect ratio */
+            transform: translate(-50%, -50%); /* Center the image in the container */
+            object-fit: contain; /* Ensure the image fits while maintaining aspect ratio */
+        }
+
+
     </style>
 
     <!-- AlpineJS -->
@@ -134,9 +185,21 @@
                 <br>5. Excel as a database management tool.  
                 
                 <br><br>In this report, I will reflect on my comprehensive experience, regarding my technical and cerebral professional development. Overall, I can successfully say I supported initiatives for improving Data and Social governance, learned a lot about enhancing electoral processes, as well as professionalism in the workplace.</a>
-                <div class = ".image-container">
-                    <img src = "images\EO pics\EO history 2.jpg">      
+
+
+                <!-- <div class = "column" style = "height:500px">
+                    <div class = "pic"><img src="images\EO pics\EO front.jpeg" style = "width:3000px"></div>
+                    <div class = "pic"><img src="images\EO pics\EO Front Desk.jpg" style = "width:3000px"></div>
+                    <div class = "pic"><img src="images\EO pics\EO moon.jpg" style = "width:3000px"></div>
+                </div> -->
+
+                <div class = "grid grid-cols-3">
+                    <div class = "image-container2"><img src="images\EO pics\EO front.jpeg"></div>
+                    <div class = "image-container2"><img src="images\EO pics\EO moon.jpg"></div>
+                    <div class = "image-container2"><img src="images\EO pics\EO Front Desk.jpg"></div>
                 </div>
+
+
 
             </div>
     </article>
@@ -159,7 +222,14 @@
                 <!-- <button-red url=”https://codepen.io/tomhodgins/pen/gPaPoq” target=”_blank” rel=”nofollow external noopener noreferrer” position=”left”]Download[/button-red]></button-red> -->
                 
                 <!-- history timeline picture -->
-                <img src = "images/second-year.png">
+                <!-- <img src = "images/second-year.png">
+                <img src = "images\EO pics\EO Front Desk.jpg">
+                <img src = "images\EO pics\EO moon.jpg"> -->
+                <div style="position: relative;">
+                    <img src="images/EO pics/EO history 2.jpg" style="width: 800px; height: 500px; position: relative; place-items: center;">
+                </div>
+                
+
             </div>
     </article>
 
@@ -176,17 +246,15 @@
                 This is done through consolidating bulk data from external suppliers and internal sources, then standardizing and transforming databases via data quality control checks to validate and apply corrections while ensuring data integrity, confidentiality, and security.
             
                 <br><br>My role as the Information Management Analyst Intern encompassed a variety of data-oriented tasks and projects enhancing register-related applications and database management systems. The specific computing domains covered are the intersection of Data Science, Geographic Information Systems (GIS) and their application to the digital humanities (social sciences). 
-                <br><br>The coolest part working with Data and GIS specialists was learning about EO’s overall information infrastructure. Being able to see end-to-end, how the information flowed within the databases, and how that connected to other teams and processes enhanced my understanding of data governance as it relates to business objectives. 
                 
-                <img src = "images/second-year.png">
+                
+              
+                <!--                 
+                <div class = "pb-6">
+                    <div class = "pic"><img src="images\EO pics\EO Data Flow.png">
+                        <img src = "images\EO pics\EO Info Mgmt Team.jpeg">
+                </div> -->
 
-                <br>- The data from my team would also be stored in digital product applications used internally and externally, including developing training materials for returning officers to use on Election day.
-
-                <br>- My Info. Mgmt. team would produce voter registration lists that would be sent to a team of municipal coordinators to disperse across organizations in Ontario.
-
-                <br>- The electors list would also have geospatial attributes would be used by a geospatial technicians to align with electoral districts and field IT and facilities could then go set up polling stations.
-            
-            </a>
             <a class="font-semibold hover:text-gray-800">The Technologies I was exposed to that are used within the team include:</a>
             - Excel and VBA
             <br>- FME
@@ -197,9 +265,36 @@
             <br>- JavaScript, HTML
             <br>- Internal Azure Cloud Applications, etc.
 
-            <a class="text-blue-700 text-sm font-bold uppercase pb-6"><br>Learning Goals & Outcomes</a>
+                <div class = "grid grid-cols-2">
+                    <div class = "image-container"><img src="images\EO pics\EO Data Flow.png" style = "border: 4px solid black;"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Info Mgmt Team.jpeg" style = "border: 4px solid rgb(255, 234, 0);"></div>
+                    <!-- <div class = "image-container2"><img src="images\EO pics\EO Front Desk.jpg"></div> -->
+                </div>
+
+            </a>
+
+            <a class="pb-6 pb-8">
+                <a class="font-semibold hover:text-gray-800">An example of Data Architecture in this team looks like:</a>
+                <br>- The data from my team would also be stored in digital product applications used internally and externally, including developing training materials for returning officers to use on Election day.
+                <br>- My Info. Mgmt. team would produce voter registration lists that would be sent to a team of municipal coordinators to disperse across organizations in Ontario.
+                <br>- The electors list would also have geospatial attributes would be used by a geospatial technicians to align with electoral districts and field IT and facilities could then go set up polling stations.
+            </a>
+  
+            <br><br>The coolest part working with Data and GIS specialists was learning about EO’s overall information infrastructure. Being able to see end-to-end, how the information flowed within the databases, and how that connected to other teams and processes enhanced my understanding of data governance as it relates to business objectives. 
+
+            <br><br>
             
-            <a class="pb-6">
+
+
+            <!-- <a class="text-blue-700 text-sm font-bold uppercase pb-6"><br>Learning Goals & Outcomes</a> -->
+<!--             
+            <div class = "pb-6">
+                <img src="images\EO pics\EO Desk.png">
+                <img src = "images\EO pics\EO Info Mgmt Team.jpeg">
+            </div> -->
+
+            <!-- <br><br> -->
+            <!-- <a class="pb-6 height:100px">
                 I had used GIS and DBMS tools in coursework which provided a good background for conceptualizing their broader applications to the organization. I specifically gained extensive experience processing Excel and VBA workbooks which is extremely useful as its appeal extends beyond every conceivable industry and position.
 
                 <br><br>Code can change, but data is forever - August 2024, Gabriel Romanescu (My Manager)
@@ -207,11 +302,8 @@
                 <br><br>Although the prototypical career most Computer Science students seek is software development, I lean more towards the data management, analytics, and insights part of the product design lifecycle. 
 
                 <br><br>Reflecting back, I was able to perform a variety of Data Governance concepts including - structuring consolidation of unstructured data, quality validation, user acceptance testing (UAT).
-            </a>
-            
-            
-            <img src = "images/second-year.png">
-        </div>
+            </a> -->         
+
     </article>
 
 
@@ -225,13 +317,29 @@
             <p class="text-sm pb-3">
                 <a class="font-semibold hover:text-gray-800">EO is a midsized company with 1 office and 1 goal. Because of its intimate work structure and my contract requiring showing up 5 days a week, in-person, I was able to network a ton with employees in every division and on every level of authority from the other interns to the CEO.
             </p>
+
+            <a class="pb-6 height:100px">
+                I had used GIS and DBMS tools in coursework which provided a good background for conceptualizing their broader applications to the organization. I specifically gained extensive experience processing Excel and VBA workbooks which is extremely useful as its appeal extends beyond every conceivable industry and position.
+
+                <br><br>Although the prototypical career most Computer Science students seek is software development, I lean more towards the data management, analytics, and insights part of the product design lifecycle. This work term opened my eyes to the world of technology and its integration into specific business and operations.
+                <br><br>Code can change, but data is forever - August 2024, Gabriel Romanescu (My Manager)
+
+                <br>
+                <a class = "font-semibold hover:text-gray-800">Reflecting back, I was able to perform a variety of Data Governance concepts:</a>
+                - Structuring consolidation of unstructured data, 
+                <br>- Quality validation, 
+                <br>- User acceptance testing (UAT), 
+                <br>- Trend-based analytics to inform decision making, 
+                <br>- Developping domain-specific research and insights.
+            </a>
+
             <a class="pb-6">
-                There were many qualities exemplified by those surrounding me which I will take as a lesson for how to succeed in my career: 
-                
-                <br><br>- My direct supervisor, Julia consistently demonstrated hard work, diligence, and patience within her responsibilities relating to the necessary attention to detail in data-oriented work.
+                <a class = "font-semibold hover:text-gray-800">There were many qualities exemplified by those surrounding me which I will take as a lesson for how to succeed in my career:</a>
+                <br>- My direct supervisor, Julia consistently demonstrated hard work, diligence, and patience within her responsibilities relating to the necessary attention to detail in data-oriented work.
                 <br>- My internal team mentor, Rachel did the same summer student program in 2019 and now works full time for the company. She gave tons of good advice from the perspective of a young person navigating the transition from school to the workforce.
-                <br>- My direct manager, Gabe taught me to be flexible and open to what life brings. Learning about his career path and the agility of transferring skills between diverse backgrounds and experiences echoed a common theme of being open-minded to new opportunities I heard this summer.
-                
+                <br>- My direct manager, Gabe taught me to be flexible and open to what life brings. Learning about his career path and the agility of transferring skills between diverse backgrounds and experiences echoed a common theme of being open-minded to new opportunities I heard this summer.<br>
+                <br>
+
                 <a class="text-blue-700 text-sm font-bold uppercase pb-4">re-evaluating my goals</a>
                 In one of my weekly mentor meetings with Rachel, who interviewed me for this position, I went over the performance objectives, and how I believed I exceeded the expectations. 
 
@@ -241,7 +349,11 @@
 
                 <br><br>You really demonstrated a lot of initiative, always asking questions, engaging with the work, while also bringing a positive attitude to the workplace - August 2024, Rachel (Info Mgmt. Team Mentor)
 
-                <img src = "images/second-year.png">
+                <div class = "grid grid-cols-3" style = "width: 100%">
+                    <div class = "image-container"><img src = "images\EO pics\EO ceo.jpeg" style = "border: 6px solid rgb(25, 45, 153);"></div>
+                    <div class = "image-container"><img src = "images\EO pics\EO Desk.png"></div>
+                    <div class = "image-container"><img src = "images\EO pics\EO intern pic.jpeg" style = "border: 6px solid rgba(193, 141, 30, 0.653);"></div>
+                </div>
             </div>
     </article>
 
@@ -253,14 +365,21 @@
                 <a class="text-2xl font-bold hover:text-gray-700 pb-4">The 9-5 Office Life</a>
                 <a class="text-blue-700 text-sm font-bold uppercase pb-4">my impact and accomplishments in the organization</a>
                 <p class="text-sm pb-3">
-                    <a class="font-semibold hover:text-gray-800">Winning Intern Project on Risk Analysis of the Future of Elections</a>
-                    My team won this Summer’s intern project proposal presentation for risk management strategies to enhance disaster resiliency for EO and other EMB’s
+                    <a class="font-semibold hover:text-gray-800">expanding on the impact of office etiquette and professionalism... Winning Intern Project on Risk Analysis of the Future of Elections</a>
+                    <br><br>My team won this Summer’s intern project proposal presentation for risk management strategies to enhance disaster resiliency for EO and other EMB’s
                 </p>
                 
                 <div class = "column" style = "height:705px">
                     <div class = "pic"><img src="images\EO pics\EO Risk Pres.png" style = "width:100%"></div>
                     <div class = "pic"><img src="images\EO pics\EO Cert.png" style = "width:100%"></div>
                 </div>
+
+
+                <div class = "column" style = "height:705px">
+                    <div class = "pic"><img src="images\EO pics\EO June BBQ.png" style = "width:500px"></div>
+                    <div class = "pic"><img src="images\EO pics\EO Blue Jays.png" style = "width:470px"></div>
+                </div>
+
 
                 <!-- <div class = "row">
                     <img src="images\EO pics\EO Risk Pres.png" style = "width:100%">
@@ -270,6 +389,7 @@
                 <a class="pb-6">
                     My main reflections from this internship that I will bring into my future ambitions in interdisciplinary technical problem solving are:
                     
+                    By-elections
                 <!-- <img src ="images\EO pics\EO Cert.png"> -->
             </div>
         </article>
@@ -279,23 +399,30 @@
         <article class="flex flex-col shadow my-4">
             <div class="bg-white flex flex-col justify-start p-6">
                 
-                <a class="text-2xl font-bold hover:text-gray-700 pb-4">the future of elections</a>
+                <a class="text-2xl font-bold hover:text-gray-700 pb-4">The Future of Elections</a>
                 <a class="text-blue-700 text-sm font-bold uppercase pb-4">Conclusions & acknowledgements</a>
-                <p class="text-sm pb-3">
-                    <a class="font-semibold hover:text-gray-800">From April to August, 2024, I had the honour of joining a one of a kind organization whose main business objective is to facilitate elections in Ontario which are, quite literally the backbone of our society.</a>
-                </p>
+                <!-- <p class="text-sm pb-3"> -->
+                    <!-- <a class="font-semibold hover:text-gray-800">
+                        In a recent article, TIME reporter Koh Ewe named 2024—The Ultimate Election Year! The largest number of voters in history will expectedly head to the polls in more than 60 countries for national and local elections. Local trends also indicate high levels of political activity within Ontario and Canada as a whole.
+                        It has therefore been an honor for me to collaborate with like-minded industry leaders to drive real world social change during this exceptional period in time!
+                    
+                    </a> -->
+                <!-- </p> -->
+
+                <a class="font-semibold hover:text-gray-800">
+                    In a recent article, TIME reporter Koh Ewe named 2024—The Ultimate Election Year! The largest number of voters in history will expectedly head to the polls in more than 60 countries for national and local elections. Local trends also indicate high levels of political activity within Ontario and Canada as a whole.
+                    <br><br>It has therefore been an honor for me to collaborate with like-minded industry leaders to drive real world social change during this exceptional period in time!
+                
+                </a>
+
                 <a class="pb-6">
                     My main reflections from this internship that I will bring into my future ambitions in interdisciplinary technical problem solving are:
-                    
-                    <br><br>1. Understanding cross-functional and integrated business systems and operations (government).
-                    <br>2. The value of human-centered, data-driven product design. 
-                    <br>3. Applying strategies for analyzing future risk preparedness.
-                    <br>4. Full-time office etiquette.
-                    <br>5. Excel as a database management tool.  
-                    
                     <br><br>In this report, I will reflect on my comprehensive experience, regarding my technical and cerebral professional development. Overall, I can successfully say I supported initiatives for improving Data and Social governance, learned a lot about enhancing electoral processes, as well as professionalism in the workplace.</a>
-                    <img src = "images/second-year.png">
+                    
+
                 </div>
+                <div class = "pic"><img src="images\EO pics\EO BBQ Polaroids.jpeg" style = "width:750px"></div>
+                
         </article>
 
 
