@@ -36,9 +36,9 @@
 
         /* Clear floats after image containers */
         .row {
-        content: "";
-        clear: both;
-        display: table;
+            content: "";
+            clear: both;
+            display: table;
         }
 
 
@@ -88,6 +88,16 @@
             width: 100%; /* Allow the width to maintain the aspect ratio */
             transform: translate(-50%, -50%); /* Center the image in the container */
             object-fit: contain; /* Ensure the image fits while maintaining aspect ratio */
+        }
+
+        
+        #main-container {
+            min-height: 400px;
+            margin: 0px 100px 10px 100px;
+            padding: 50px;
+            background-color: #fcfce2;
+            /* border: 2px solid #000; */
+            overflow: auto;
         }
 
 
@@ -160,21 +170,22 @@
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                <a href="S24-EO.html" class="bg-yellow-400 rounded py-2 px-4 mx-2">S24 - Information Management Analyst @ Elections Ontario</a>
+                <a href="S24-EO.html" class="bg-yellow-400 rounded py-2 px-4 mx-2">Summer 2024 - Information Management Analyst @ Elections Ontario</a>
             </div>
         </div>
     </nav>
 
 
     <!-- Introduction to report -->
+<div id = "main-container">
     <article class="flex flex-col shadow my-4">
+
         <div class="bg-white flex flex-col justify-start p-6">
             
             <a class="text-2xl font-bold hover:text-gray-700 pb-4">Upholding the Democracy - My Summer with Elections Ontario.</a>
             <a class="text-blue-700 text-sm font-bold uppercase pb-4">Introduction</a>
-            <p class="text-sm pb-3">
-                <a class="font-semibold hover:text-gray-800">From April to August, 2024, I had the honour of joining a one of a kind organization whose main business objective is to facilitate elections in Ontario which are, quite literally the backbone of our society.</a>
-            </p>
+            <a class="font-semibold hover:text-gray-800">From April to August, 2024, I had the honour of joining a one of a kind organization whose main business objective is to facilitate elections in Ontario which are, quite literally the backbone of our society.</a>
+
             <a class="pb-6">
                 My main reflections from this internship that I will bring into my future ambitions in interdisciplinary technical problem solving are:
                 
@@ -211,10 +222,7 @@
             
             <a class="text-2xl font-bold hover:text-gray-700 pb-4">The Office of the Chief Electoral Officer (Elections Ontario)</a>
             <a class="text-blue-700 text-sm font-bold uppercase pb-4">About the employer</a>
-            <p class="text-sm pb-3">
-                <a class="font-semibold hover:text-gray-800">Elections Ontario (EO) is an independent, nonpartisan office of the Legislative Assembly of Ontario, responsible for administering provincial elections, by-elections, and referenda in Ontario. We are committed to making voting easy and accessible for all electors, while maintaining the integrity, security, and transparency of the electoral process.</a>
-                <img src>
-            </p>
+            <a class="font-semibold hover:text-gray-800 pb-6">Elections Ontario (EO) is an independent, nonpartisan office of the Legislative Assembly of Ontario, responsible for administering provincial elections, by-elections, and referenda in Ontario. We are committed to making voting easy and accessible for all electors, while maintaining the integrity, security, and transparency of the electoral process.</a>
             <a class="pb-6">
                 Since Ontario’s first election in 1867, to the first official office of the Chief Electoral Officer in 1920, the organization has worked to facilitate Ontario’s democratic process. 
                 <br><br>Today, EO is an industry leader among Electoral Management Bodies (EMB’s) globally, and is constantly striving to maintain a balance of new ideas & innovations along with maintaining the core principles of democracy. 
@@ -226,7 +234,7 @@
                 <img src = "images\EO pics\EO Front Desk.jpg">
                 <img src = "images\EO pics\EO moon.jpg"> -->
                 <div style="position: relative;">
-                    <img src="images/EO pics/EO history 2.jpg" style="width: 800px; height: 500px; position: relative; place-items: center;">
+                    <img src="images/EO pics/EO history 2.jpg" style="width: 800px; height: 500px; position: relative; place-items: center; border: 6px solid rgb(3, 66, 117)">
                 </div>
                 
 
@@ -237,7 +245,6 @@
     <!-- My team & job description -->
     <article class="flex flex-col shadow my-4">
         <div class="bg-white flex flex-col justify-start p-6">
-            
             <a class="text-2xl font-bold hover:text-gray-700 pb-4">My Team: The Provincial Registry of Electors</a>
             <a class="text-blue-700 text-sm font-bold uppercase pb-4">My Role in the company (job description)</a>
             <a class="font-semibold hover:text-gray-800 pb-6">The goals of the Register Division are to maintain the integrity and accuracy of Ontario’s voter registration lists.</a>
@@ -266,15 +273,15 @@
             <br>- Internal Azure Cloud Applications, etc.
 
                 <div class = "grid grid-cols-2">
-                    <div class = "image-container"><img src="images\EO pics\EO Data Flow.png" style = "border: 4px solid black;"></div>
-                    <div class = "image-container"><img src="images\EO pics\EO Info Mgmt Team.jpeg" style = "border: 4px solid rgb(255, 234, 0);"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Data Flow.png" style = "border: 6px solid black;"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Info Mgmt Team.jpeg" style = "border: 6px solid rgb(255, 234, 0);"></div>
                     <!-- <div class = "image-container2"><img src="images\EO pics\EO Front Desk.jpg"></div> -->
                 </div>
 
             </a>
 
             <a class="pb-6 pb-8">
-                <a class="font-semibold hover:text-gray-800">An example of Data Architecture in this team looks like:</a>
+                <a class="font-semibold hover:text-gray-800">An example of Data Architecture in this team looks like: (see diagram I created above)</a>
                 <br>- The data from my team would also be stored in digital product applications used internally and externally, including developing training materials for returning officers to use on Election day.
                 <br>- My Info. Mgmt. team would produce voter registration lists that would be sent to a team of municipal coordinators to disperse across organizations in Ontario.
                 <br>- The electors list would also have geospatial attributes would be used by a geospatial technicians to align with electoral districts and field IT and facilities could then go set up polling stations.
@@ -314,9 +321,8 @@
             
             <a class="text-2xl font-bold hover:text-gray-700 pb-4">Notable Mentorship Lessons</a>
             <a class="text-blue-700 text-sm font-bold uppercase pb-4">My future career</a>
-            <p class="text-sm pb-3">
-                <a class="font-semibold hover:text-gray-800">EO is a midsized company with 1 office and 1 goal. Because of its intimate work structure and my contract requiring showing up 5 days a week, in-person, I was able to network a ton with employees in every division and on every level of authority from the other interns to the CEO.
-            </p>
+            <a class="font-semibold hover:text-gray-800">EO is a midsized company with 1 office and 1 goal. Because of its intimate work structure and my contract requiring showing up 5 days a week, in-person, I was able to network a ton with employees in every division and on every level of authority from the other interns to the CEO.
+
 
             <a class="pb-6 height:100px">
                 I had used GIS and DBMS tools in coursework which provided a good background for conceptualizing their broader applications to the organization. I specifically gained extensive experience processing Excel and VBA workbooks which is extremely useful as its appeal extends beyond every conceivable industry and position.
@@ -364,20 +370,33 @@
                 
                 <a class="text-2xl font-bold hover:text-gray-700 pb-4">The 9-5 Office Life</a>
                 <a class="text-blue-700 text-sm font-bold uppercase pb-4">my impact and accomplishments in the organization</a>
-                <p class="text-sm pb-3">
-                    <a class="font-semibold hover:text-gray-800">expanding on the impact of office etiquette and professionalism... Winning Intern Project on Risk Analysis of the Future of Elections</a>
-                    <br><br>My team won this Summer’s intern project proposal presentation for risk management strategies to enhance disaster resiliency for EO and other EMB’s
-                </p>
+                <a class="font-semibold hover:text-gray-800">Expanding on the impact of office etiquette and professionalism... I participated in various office initiative to bring a strong energy to the organization</a>
+                  
+                <a class="text-blue-700 text-sm font-bold uppercase pb-4">
+                    <br>Winning the Intern Project on Risk Analysis of the Future of Elections
+                </a>
+
+                <a class="pb-6 height:100px">
+                    My team won this year’s intern project proposal presentation for risk management strategies to enhance disaster resiliency for EO and other EMB’s. We presented these findings and suggestions to management and executives who were looking for young and fresh ideas from youth in the province EO represents.
+                    <br><br>Collaborating in a cross-functional team of interns from other divisions was a great learning experience for us to combine our unique skills and perspectives together. I knew about cybersecurity and technology trends, while my team members knew about law and environmental justice.
+                </a>
                 
-                <div class = "column" style = "height:705px">
-                    <div class = "pic"><img src="images\EO pics\EO Risk Pres.png" style = "width:100%"></div>
-                    <div class = "pic"><img src="images\EO pics\EO Cert.png" style = "width:100%"></div>
+                <div class = "grid grid-cols-2" style = "height:100%">
+                    <div class = "image-container"><img src="images\EO pics\EO Risk Pres.png" style = "height:300px"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Cert.png" style = "height:300px"></div>
                 </div>
 
+                <a class="text-blue-700 text-sm font-bold uppercase pb-4">
+                    <br>My involvement in the office Social Committee - connecting with other employees across the company.
+                </a>
+                Bringing my event planning skills from the RA job to life in a corporate setting was a great way to enhance my creativity, project management, and professional networking. It was in these initiative where I was praised for my attitude and work ethic by other employees I had not directly worked with.
+                <br><br>These 2 posters are examples of social events I helped facilitate. I helped strategize ideas and logistics, designed promotional posters, and specifically brought back physcial media in the form of polaroid photos (seen in next section below). Seeing people enjoy their time in the office, meeting each other, and hanging up the polaroid photos I took of them on their desk was incredibly fufilling. 
 
-                <div class = "column" style = "height:705px">
-                    <div class = "pic"><img src="images\EO pics\EO June BBQ.png" style = "width:500px"></div>
-                    <div class = "pic"><img src="images\EO pics\EO Blue Jays.png" style = "width:470px"></div>
+                <div class = "column" style = "height:100%">
+                    <div class = "image-container"><img src="images\EO pics\EO June BBQ.png" style = "width:300px"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Desserts.jpg" style = "width:300px"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Ice cream boy.jpg" style = "width:300px"></div>
+                    <div class = "image-container"><img src="images\EO pics\EO Blue Jays.png" style = "width:300px"></div>
                 </div>
 
 
@@ -386,10 +405,19 @@
                 </div> -->
 
 
+                <a class="text-blue-700 text-sm font-bold uppercase pb-4">
+                    <br>preparing for a real election - the 2024 Bay of quinte by-election
+                </a>
                 <a class="pb-6">
-                    My main reflections from this internship that I will bring into my future ambitions in interdisciplinary technical problem solving are:
-                    
-                    By-elections
+                    When I started in April, the Milton and Lambton-Kent-Middlesex by-elections were taking place. I wasn't able to contribute as I had just onboarded and I had hoped to see one during my term in the summer.
+                    <br><br>
+                    Fast-forward to the very last week, a snap by-election was called and seeing the development made everything I had learned about, real. At one point, I was on printer duty and seeing the physical list of electors for the riding was a transformative feeling. It was the feeling of knowing my impact of analyzing the quality of the elector registry list actually had real-world implications, knowing the work I did for the product, actually meant something.
+                </a>
+
+                <div class = "column" style = "height:100%">
+                    <div class = "image-container"><img src = "images\EO pics\EO Bay of Quinte BE.PNG" style = "border: 6px solid rgb(239, 204, 11);"></div>
+                </div>
+
                 <!-- <img src ="images\EO pics\EO Cert.png"> -->
             </div>
         </article>
@@ -420,9 +448,11 @@
                     <br><br>In this report, I will reflect on my comprehensive experience, regarding my technical and cerebral professional development. Overall, I can successfully say I supported initiatives for improving Data and Social governance, learned a lot about enhancing electoral processes, as well as professionalism in the workplace.</a>
                     
 
-                </div>
-                <div class = "pic"><img src="images\EO pics\EO BBQ Polaroids.jpeg" style = "width:750px"></div>
-                
+    
+            <div style = "text-align: center; padding: 50px;">
+                <img src="images\EO pics\EO BBQ Polaroids.jpeg" style = "width:750px; border: 10px solid red">
+            </div>
+        </div>  
         </article>
 
 
@@ -431,9 +461,7 @@
 
 
 
-
-
-
+</div>
     <footer class="w-full border-t bg-white pb-12">        
         <div class="relative w-full container mx-auto flex flex-col items-center uppercase pb-6 "><br>&copy; contact me: Molinuofg@gmail.com</div>
     </footer>
