@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBC F24</title>
+    <link rel="icon" href="images\RBC pics\RBCI mini logo.jpg">
+    <meta name="author" content="Molin Li">
+    <meta name="description" content="Molin Li">
+
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        .column {
+            float: left;
+            align-items: center;
+            display: flex;
+            /* position: relative; */
+            /* width: 50%; */
+            height: 10%;
+            padding-left: 25px;
+
+        }
+        .pic {
+            float: left;
+            padding: 5px;
+            margin-left: 15px ;
+            margin-right: 15px;
+        }
+
+        /* Clear floats after image containers */
+        .row {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        .image-container {
+            display: flex;
+            justify-content: space-between; /* optional: to add space between images */
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom:20px;
+            margin-top:50px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            height: 400px; 
+            width: auto; 
+        }
+
+
+        .image-row {
+            display: grid;
+            grid-template-columns: repeat(3, 300px); /* Create 3 columns of fixed width */
+            gap: 10px; /* Optional: Adjust spacing between images */
+        }
+
+        .image-row img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        
+
+        .image-container2 {
+            position: relative;
+            width: auto; /* Let the width be dynamic */
+            height: 400px; /* Set a fixed height for all images */
+            overflow: hidden;
+            justify-content: space-between; /* optional: to add space between images */
+        }
+
+        .image-container2 img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 100%; /* Set the height of the image to fill the container */
+            width: 100%; /* Allow the width to maintain the aspect ratio */
+            transform: translate(-50%, -50%); /* Center the image in the container */
+            object-fit: contain; /* Ensure the image fits while maintaining aspect ratio */
+        }
+
+        
+        #main-container {
+            min-height: 400px;
+            margin: 0px 100px 10px 100px;
+            padding: 50px;
+            background-color: cornflowerblue;
+            /* border: 2px solid #000; */
+            overflow: auto;
+        }
+
+
+    </style>
+
+    <!-- AlpineJS -->
+    <!-- <script src = "https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white font-family-karla">
+
+    <!-- Top Bar Nav -->
+    <nav class="w-full py-4 bg-blue-800 shadow">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+
+            <nav>
+                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                    <li><a class="hover:text-blue-300 hover:underline px-4" href="home.html">Home</a></li>
+                    <li><a class="hover:text-blue-300 hover:underline px-4" href="resume.html">Resume</a></li>
+                    <li><a class="hover:text-blue-300 hover:underline px-4" href="co-op.html">Co-op</a></li>
+                    <li><a class="hover:text-blue-300 hover:underline px-4" href="projects.html">Projects</a></li>
+                    <!-- <li><a class="hover:text-gray-200 hover:underline px-4" href="#">About</a></li> -->
+                    <li><a class="hover:text-blue-300 hover:underline px-4" href ="https://fontawesome.com/v4/icons/">Icons</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                <a class="pl-6 hover:text-green-500 hover:underline px-4" href = "mailto:molinuofg@gmail.com">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email
+                </a>
+                <!-- <a class="pl-6" href="https://vsco.co/mol-out/gallery">
+                    <i class="fa fa-camera-retro"></i>  vsco
+                </a> -->
+                <a class="pl-6 hover:text-gray-500 hover:underline px-4" href="https://github.com/molin660" target="_blank">
+                    <i class="fab fa-github"></i> Github
+                </a>
+                <a class="pl-6 hover:text-blue-500 hover:underline px-4" href ="https://www.linkedin.com/in/molin-li/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Text Header -->
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                Molin's Portfolio
+            </a>
+            <p class="text-lg text-gray-400" style = "display: flex; flex-direction: column; align-items: center;">
+                Pensions and Annuity Administration - Business Processes, Technology, and Operations
+                <img src = "images\RBC pics\blue RBCI logo.png" style = "height: 75px; padding: 2px">
+            </p>
+        </div>
+    </header>
+
+
+    <!-- Topic Nav -->
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div class="block sm:hidden">
+            <a
+                href="#"
+                class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                @click="open = !open"
+            >
+                Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+            </a>
+        </div>
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="F24-RBC.html" class="bg-blue-600 rounded py-2 px-4 mx-2">Fall 2024 - Business Technology Analyst @ RBC Insurance</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Introduction to report -->
+<div id = "main-container">
+    <article class="flex flex-col shadow my-4">
+    
+    </article>
+</div>
+    <footer class="w-full border-t bg-white pb-12">        
+        <div class="relative w-full container mx-auto flex flex-col items-center uppercase pb-6 "><br>&copy; contact me: Molinuofg@gmail.com</div>
+    </footer>
+
+
+</body>
+</html>
