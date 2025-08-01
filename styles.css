@@ -1,0 +1,71 @@
+/* Tailwind Base Config */
+/* Custom Styles */
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+/* Body Styles */
+body {
+    font-family: karla;
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* responsive */
+    max-width: 150px; /* Maximum width */
+    height: 100%;
+    max-height: 250px;
+    padding-top: 133%; /* Maintain 3:4 aspect ratio */
+    overflow: hidden;
+}
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the container while maintaining its aspect ratio */
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* Header Styles */
+header a {
+    text-decoration: none;
+}
+
+header p {
+    margin-bottom: 0.5rem;
+}
+
+/* Article Styles */
+article {
+    margin-bottom: 2rem;
+}
+
+/* Sidebar Styles */
+aside {
+    margin-top: 2rem;
+}
+
+aside p {
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #1e40af;
+}
+
+/* Image Container Styles */
+.image-container img {
+    border-radius: 0.5rem;
+}
