@@ -69,13 +69,13 @@
         
         .timeline-dot {
             position: absolute;
-            left: -34px;
+            left: -33.75px;
             top: 0;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             background: #3b82f6;
-            border: 3px solid white;
+            border: 2.5px solid white;
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
             z-index: 2;
         }
@@ -157,34 +157,100 @@
 
 <body class="bg-white font-family-karla">
 
-    <nav class="w-full p-4 h-15 bg-blue-800 text-white px-20">
-        <div class="flex flex-wrap md:flex-row md:justify-between md:items-center font-bold text-sm uppercase">
+    <nav class="w-full p-4 bg-blue-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center font-bold text-xl md:text-2x2 uppercase">
 
-            <!-- Left: Page Links -->
-            <div class="text-lg flex flex-col md:flex-row gap-y-2 gap-x-2 md:space-y-0 md:space-x-8 mb-4 md:mb-0">
-                <a class="flex items-center gap-8 hover:text-blue-300 hover:underline" href="home.html">Home</a></li>
-                <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="resume.html">Resume</a></li>
-                <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="co-op.html">Co-op</a></li>
-                <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="projects.html">Projects</a></li>
-            </div>
+                <!-- Mobile menu button (hidden on md and above) -->
+                <div class="md:hidden w-full flex justify-between items-center mb-4">
+                    <!-- Logo/Brand could go here -->
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
 
-            <!-- Right: Social/Email Icons -->
-            <div class="text-lg flex flex-col md:flex-row gap-y-2 gap-x-2 md:space-y-0 md:space-x-8">
-                <a class="flex items-center gap-2 hover:text-blue-200 hover:underline" href="mailto:molinuofg@gmail.com">
-                    <i class="fa fa-envelope" aria-hidden="true"></i> Email
-                </a>
-                <a class="flex items-center gap-2 hover:text-gray-500 hover:underline" href="https://github.com/molin660" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a class="flex items-center gap-2 hover:text-blue-500 hover:underline" href="https://www.linkedin.com/in/molin-li/" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a class="flex items-center gap-2 hover:text-green-500 hover:underline" href="https://open.spotify.com/user/31m3ajgcqgupg7ww2grkunvke7se" target="_blank">
-                    <i class="fab fa-spotify"></i> Spotify
-                </a>
+                <!-- Left: Page Links -->
+                <div id="nav-links" class="hidden md:flex flex-col md:flex-row gap-4 md:gap-8 w-full md:w-auto">
+                    <a class="flex items-center hover:text-blue-300 hover:underline transition-colors duration-200 py-2 md:py-0" href="home.html">Home</a>
+                    <a class="flex items-center hover:text-blue-300 hover:underline transition-colors duration-200 py-2 md:py-0" href="resume.html">Resume</a>
+                    <a class="flex items-center hover:text-blue-300 hover:underline transition-colors duration-200 py-2 md:py-0" href="co-op.html">Co-op</a>
+                    <a class="flex items-center hover:text-blue-300 hover:underline transition-colors duration-200 py-2 md:py-0" href="projects.html">Projects</a>
+                </div>
+
+                <!-- Right: Social/Email Icons -->
+                <div class="hidden md:flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8">
+                    <a class="flex items-center gap-2 hover:text-blue-200 transition-colors duration-200" href="mailto:molinuofg@gmail.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span class="hidden lg:inline">Email</span>
+                    </a>
+                    <a class="flex items-center gap-2 hover:text-gray-300 transition-colors duration-200" href="https://github.com/molin660" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span class="hidden lg:inline">GitHub</span>
+                    </a>
+                    <a class="flex items-center gap-2 hover:text-blue-300 transition-colors duration-200" href="https://www.linkedin.com/in/molin-li/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="hidden lg:inline">LinkedIn</span>
+                    </a>
+                    <a class="flex items-center gap-2 hover:text-green-300 transition-colors duration-200" href="https://open.spotify.com/user/31m3ajgcqgupg7ww2grkunvke7se" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                        <span class="hidden lg:inline">Spotify</span>
+                    </a>
+                </div>
+
+                <!-- Mobile social icons (only icons, no text) -->
+                <div class="md:hidden flex gap-4 mt-4">
+                    <a class="hover:text-blue-200" href="mailto:molinuofg@gmail.com">
+                        <i class="fa fa-envelope text-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="hover:text-gray-300" href="https://github.com/molin660" target="_blank">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a class="hover:text-blue-300" href="https://www.linkedin.com/in/molin-li/" target="_blank">
+                        <i class="fab fa-linkedin text-lg"></i>
+                    </a>
+                    <a class="hover:text-green-300" href="https://open.spotify.com/user/31m3ajgcqgupg7ww2grkunvke7se" target="_blank">
+                        <i class="fab fa-spotify text-lg"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden bg-blue-900 text-white hidden">
+        <div class="px-4 py-2 space-y-1">
+            <a class="block py-3 hover:text-blue-300 hover:bg-blue-700 px-4 rounded transition-colors duration-200" href="home.html">Home</a>
+            <a class="block py-3 hover:text-blue-300 hover:bg-blue-700 px-4 rounded transition-colors duration-200" href="resume.html">Resume</a>
+            <a class="block py-3 hover:text-blue-300 hover:bg-blue-700 px-4 rounded transition-colors duration-200" href="co-op.html">Co-op</a>
+            <!-- <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="projects.html">Projects</a></li> -->
+            <a class="block py-3 hover:text-blue-300 hover:bg-blue-700 px-4 rounded transition-colors duration-200" href="projects.html">Projects</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                this.innerHTML = '<i class="fa fa-times text-xl"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                this.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-button').innerHTML = '<i class="fa fa-bars text-xl"></i>';
+            });
+        });
+    </script>
 
     <!-- Text Header -->
     <header class="w-full container mx-auto">
@@ -229,9 +295,9 @@
                     <!-- <p href="#" class="text-sm pb-3">
                         <a href="#" class="font-semibold hover:text-gray-800">Minor in Business Data Analytics - 4th Year Student</a>
                     </p> -->
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">My University Journey Timeline</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">My Professional Journey Timeline</h3>
                         
-                    <a href="#" class="pb-6">My academics enhance my strong understanding of technical approaches to interdisciplinary problem solving</a>
+                    <a href="#" class="pb-6">My work experience, extracurriculars, and academics enhance my understanding of technology & business when solving interdisciplinary problems!</a>
                     <!-- <a href="#" class="pb-6"><b>Relevant Coursework:</b> Data Structures, Algorithms, Object-Oriented Programming, Software Development, Computer Architecture, Statistics, Linear Algebra, Econometrics, GIS Analysis, Business Analytics</a> -->
                     <!-- <a href="#" class="pb-6"><b>Residence Assistant:</b> Leadership, Mentorship, & Community Building</a> -->
                     
@@ -252,7 +318,7 @@
                                     <h3 class="timeline-title">Data Strategy Analyst Intern - Governance</h3>
                                     <p class="timeline-company">@ Sun Life Canada</p>
                                     <p>
-                                        Did a lot of fun democracy stuff.
+                                        Did a lot of fun data stuff.
                                     </p>
                                 </div>
                             </div>
@@ -263,14 +329,17 @@
                                 <div class="timeline-content">
                                     <div class="timeline-period">
                                         <i class="fas fa-calendar-alt"></i>
-                                        <span>Sep 2022 - Apr 2023</span>
+                                        <span>Sep 2025 - Present</span>
                                     </div>
                                     <h3 class="timeline-title">Teaching Assistant - Intro to Computing</h3>
                                     <p class="timeline-company">@ University of Guelph, School of Computer Science</p>
                                     <p>
-                                        Assisted professors in grading assignments and exams for introductory 
-                                        programming courses. Conducted weekly office hours to help students with 
-                                        programming concepts and debugging. Developed comprehensive study materials.
+                                        Helped students understand course material 
+                                        (Excel/VBA, databases, automation, industry applications,
+                                        operating systems, digital literacy).
+
+                                        Assisted grading and course improvement development with professor.
+                                        
                                     </p>
                                 </div>
                             </div>
@@ -281,12 +350,12 @@
                                 <div class="timeline-content">
                                     <div class="timeline-period">
                                         <i class="fas fa-calendar-alt"></i>
-                                        <span>April 2024 - Aug 2024</span>
+                                        <span>May - Aug 2025</span>
                                     </div>
                                     <h3 class="timeline-title">Data Analyst Intern - Risk</h3>
                                     <p class="timeline-company">@ BMO Capital Markets</p>
                                     <p>
-                                        Did a lot of fun democracy stuff.
+                                        Did a lot of fun operational risk stuff.
                                     </p>
                                 </div>
                             </div>
@@ -302,7 +371,7 @@
                                     <h3 class="timeline-title">Business Technology Analyst Intern - Product</h3>
                                     <p class="timeline-company">@ RBC Insurance</p>
                                     <p>
-                                        Did a lot of fun democracy stuff.
+                                        Did a lot of fun product enablement stuff.
                                     </p>
                                 </div>
                             </div>
@@ -334,10 +403,9 @@
                                     <h3 class="timeline-title">Residence Assistant</h3>
                                     <p class="timeline-company">@ University of Guelph, Student Housing</p>
                                     <p>
-                                        This role strengthened my leadership and conflict resolution skills. Beyond enforcing 
-                                        building policies and safety protocols, I fostered a positive community by facilitating 
-                                        engaging and fun events. I built meaningful relationships with students, helping them 
-                                        feel a sense of belonging and security.
+                                        strengthened leadership and relationship-building throughmentorship of diverse student experiences. 
+                                        facilitating engaging events and won an award for program management.
+                                        
                                     </p>
                                 </div>
                             </div>
@@ -353,7 +421,7 @@
                                     <h3 class="timeline-title">Online Data Analyst - AI Quality</h3>
                                     <p class="timeline-company">@ Telus Digital</p>
                                     <p>
-                                        Data Quality, Prompt Engineering. 
+                                        learned about ai use cases, data quality, and prompt engineering. 
                                     </p>
                                 </div>
                             </div>
@@ -369,7 +437,8 @@
                                     <h3 class="timeline-title">Explore Canada French Exchange</h3>
                                     <p class="timeline-company">@ University of Saskachewan</p>
                                     <p>
-                                        I was a Bilingual Youth Ambassador later. 
+                                        spent weeks in saskatoon learning french & culture. 
+                                        I was a bilingual youth ambassador later to promote this program later. 
                                     </p>
                                 </div>
                             </div>
@@ -385,10 +454,14 @@
                                     <h3 class="timeline-title">Bachelor of Computer Science</h3>
                                     <p class="timeline-company">@ University of Guelph</p>
                                     <p>
-                                        I started my undergraduate studies in Computer Science at the University of Guelph in
-                                        September 2022. Throughout my academic journey, I have developed a strong foundation.....
+                                        My undergraduate studies began in September 2022. 
+                                        Throughout my academic journey, I have developed a strong foundation.....
                                         <br><br>
-                                        Coursework: Data Structures, Algorithms, Object-Oriented Programming, Software Development, Computer Architecture, Statistics, Linear Algebra, Econometrics, GIS Analysis, Business Analytics
+                                        Coursework: Data Science, Machine Learning, 
+                                        Data Structures, Algorithms, 
+                                        Object-Oriented Programming, Software Development, 
+                                        Statistics, Econometrics, GIS Analysis, 
+                                        Business Analytics, Simulations
                                     </p>
                                 </div>
                             </div>
@@ -480,9 +553,9 @@
             <div class="w-full bg-white shadow flex flex-col my-4 p-6">
                 <p class="text-xl font-semibold pb-5">Skills</p>
                 <ul class="list-disc list-inside">
-                    <li>Programming Languages: Python, Java, C++, SQL</li>
-                    <li>Data Analysis: Pandas, NumPy, Matplotlib</li>
-                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <!-- <li>Programming Languages: Python, Java, C++, SQL</li> -->
+                    <!-- <li>Data Analysis: Pandas, NumPy, Matplotlib<li> -->
+                    <!-- <li>Web Development: HTML, CSS, JavaScript</li> -->
                     <!-- <li>Version Control: Git, GitHub</li> -->
                     <!-- <li>Soft Skills: Communication, Teamwork, Problem-Solving</li> -->
                 </ul>
