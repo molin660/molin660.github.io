@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBC S26</title>
+    <link rel="icon" href="images\CIBC pics\CIBC-logo.jpg" style="width: 500px; height: 300px;">
+    <meta name="author" content="Molin Li">
+    <meta name="description" content="Molin Li">
+
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+
+        #main-container {
+            min-height: 400px;
+            margin: 0px 0px 10px 0px;
+            padding: 50px;
+            background-color: rgb(213, 71, 80);
+            /* border: 2px solid #000; */
+            overflow: auto;
+        }
+    </style>
+
+    <!-- AlpineJS -->
+    <!-- <script src = "https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white font-family-karla">
+    <!-- Top Bar Nav -->
+    <nav class="w-full p-4 h-15 bg-blue-800 text-white px-20">
+        <div class="flex flex-wrap md:flex-row md:justify-between md:items-center font-bold text-sm uppercase">
+
+            <!-- Left: Page Links -->
+            <div class="text-lg flex flex-col md:flex-row gap-y-2 gap-x-2 md:space-y-0 md:space-x-8 mb-4 md:mb-0">
+                <a class="flex items-center gap-8 hover:text-blue-300 hover:underline" href="home.html">Home</a></li>
+                <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="resume.html">Resume</a></li>
+                <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="co-op.html">Co-op</a></li>
+                <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="projects.html">Projects</a></li>
+                <!-- <a class="flex items-center gap-2 hover:text-blue-300 hover:underline" href="https://fontawesome.com/v4/icons/">Icons</a></li> -->
+            </div>
+
+            <!-- Right: Social/Email Icons -->
+            <div class="text-lg flex flex-col md:flex-row gap-y-2 gap-x-2 md:space-y-0 md:space-x-8">
+                <a class="flex items-center gap-2 hover:text-blue-200 hover:underline" href="mailto:molinuofg@gmail.com">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> Email
+                </a>
+                <a class="flex items-center gap-2 hover:text-gray-500 hover:underline" href="https://github.com/molin660" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a class="flex items-center gap-2 hover:text-blue-500 hover:underline" href="https://www.linkedin.com/in/molin-li/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a class="flex items-center gap-2 hover:text-green-500 hover:underline" href="https://open.spotify.com/user/31m3ajgcqgupg7ww2grkunvke7se" target="_blank">
+                    <i class="fab fa-spotify"></i> Spotify
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Text Header -->
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                Molin's Portfolio
+            </a>
+            <p class="text-lg text-gray-400" style = "display: flex; flex-direction: column; align-items: center;">
+                Cyber Security & Enablement  - Enterprise Digital Strategy
+                <img src = "images\CIBC pics\CIBC-header.jpg" style = "height: 75px; padding: 2px">
+            </p>
+        </div>
+    </header>
+
+    <!-- Topic Nav -->
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div class="block sm:hidden">
+            <a
+                href="#"
+                class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                @click="open = !open"
+            >
+                Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+            </a>
+        </div>
+        
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <!-- <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="hover:bg-red-500 rounded py-2 px-4 mx-2">Residence Assistant @ University of Guelph</a>
+            </div> -->
+            
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="S23-Telus.html" class="hover:bg-green-300 rounded py-2 px-4 mx-2">Summer 2023 - Data Analyst @ Telus Digital</a>
+            </div>
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="S24-EO.html" class="hover:bg-yellow-400 rounded py-2 px-4 mx-2">Summer 2024 - Information Management Analyst @ Elections Ontario</a>
+            </div>
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="F24-RBC.html" class="hover:bg-blue-600 rounded py-2 px-4 mx-2">Fall 2024 & Summer 2025 - Business Technology Analyst @ RBC banking</a>
+            </div>
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="S25-BMO.html" class="hover:bg-blue-300 rounded py-2 px-4 mx-2">Summer 2025 - Risk Data Analyst @ BMO Capital Markets</a>
+            </div>
+                        <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="W26-SL.html" class="hover:bg-yellow-200 rounded py-2 px-4 mx-2">Winter 2026 - Data Governance Analyst @ Sun Life</a>
+            </div>
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="S26-CIBC.html" class="bg-red-200 rounded py-2 px-4 mx-2">Summer 2026 - Cyber Security Analyst @ CIBC</a>
+            </div>
+
+            <!-- <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">S26 - Solutions Architect @ Amazon Web Services</a>
+            </div>
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="#" class="hover:bg-purple-500 rounded py-2 px-4 mx-2">S26 - Data Engineer @ Datadog</a>
+            </div> -->
+        </div>
+        </div>
+    </nav>
+
+
+    
+    <!-- Introduction to report -->
+    <div id = "main-container">
+        <article class="flex flex-col shadow my-4">
+            <div class="bg-white flex flex-col justify-start p-6">
+                <a class="text-2xl font-bold hover:text-gray-700 pb-4">
+                    Enabling Enterprise Cyber Security- My Summer with CIBC.
+                </a>
+                <a class="text-blue-700 text-sm font-bold uppercase pb-4">
+                    Introduction
+                <a class="font-semibold hover:text-gray-800">
+                    From May to August 2026, I
+                    was honoured to join CIBC in the Data Analytics space 
+                    working on cool projects in an emerging field - Cyber Security!
+                <a class="pb-6">
+                    <br>
+                    In this report, I will reflect on my learning, networking, 
+                    professional maturity, and enjoying corporate life.
+                    Overall, I reflect on the importance of business and 
+                    domain knowledge, data-driven digital transformation, 
+                    and entreprise strategy/workplace cultures
+                    <br><br>1. About Employer: CIBC
+                    <br>2. My Position: Cyber Security Analyst
+                    <br>3. Culture and Leadership: adapting and learning in new roles
+                    <br>4. Conclusion 
+                    <!-- <div class = "column" style = "height:500px">
+                        <div class = "pic"><img src="images\EO pics\EO front.jpeg" style = "width:3000px"></div>
+                        <div class = "pic"><img src="images\EO pics\EO Front Desk.jpg" style = "width:3000px"></div>
+                        <div class = "pic"><img src="images\EO pics\EO moon.jpg" style = "width:3000px"></div>
+                    </div> -->
+                
+                    <div style = "text-align: center; padding: 50px;">
+                        <div class = "image-container">
+                            <img src="images\SL pics\1york-collage.png" style = "border: 6px solid rgb(21, 86, 119)">
+                            <br>
+                            <img src="images\SL pics\KW-collage.png" style = "border: 6px solid rgb(248, 224, 144)">
+                        </div>
+                    </div>
+                </div>
+        </article>
+
+
+        <!-- Employee information -->
+        <article class="flex flex-col shadow my-4">
+            <div class="bg-white flex flex-col justify-start p-6">
+                
+                <a class="text-2xl font-bold hover:text-gray-700 pb-4">
+                    CIBC - Ambitions Made Real</a>
+                <a class="text-blue-700 text-sm font-bold uppercase pb-4">About the employer</a>
+                <a class="font-semibold hover:text-gray-800 pb-6">
+                    CIBC is a leading banking company that helps people achieve financial security and live healthier lives. 
+                    <br><br>Today, CIBC’s vision for future-forward innovation, 
+                    aligns with my overall interests as a student. 
+                    With a clear focus on technical and strategic business improvement, 
+                    I realized the significance of Client-Centered, 
+                    Data-Driven, Digital Transformation.
+                </a>
+
+                <div style = "text-align: center; padding: 50px;">
+                    <img src="images\SL pics\student-collage.png" style = border: 6px solid rgb(3, 66, 117)">
+                </div>
+                <a class="pb-6">
+                    "CIBC’s commitment to innovation and digital transformation is evident in its investments in technology and data analytics. 
+                    The company has implemented various digital initiatives, such as mobile apps and online platforms, to enhance customer experience and improve operational efficiency. 
+                    Additionally, CIBC has been leveraging data analytics to gain insights into customer behavior and preferences, which has helped the company to develop more personalized products and services." - Github Copilot
+                </a>
+            </div>
+        </article>
+
+
+
+
+        <!-- Team & Role -->
+        <!-- Learning Goal 1 -->
+        <article class="flex flex-col shadow my-4">
+            <div class="bg-white flex flex-col justify-start p-6">
+
+                <a class="text-2xl font-bold hover:text-gray-700 pb-4">
+                    My Team: Cyber Exposure Reduction (CER) - Cyber and Third Party Risk Management (CTPR) - Chief Security Office (CSO)
+                </a>
+                <a class="text-blue-700 text-sm font-bold uppercase pb-4">
+                    My Role in the company (job description) & Goals
+                </a>
+                
+                <a class="font-semibold hover:text-gray-800 pb-6">
+                    The goals of CER is to report on vulnerabilities and risks in the enterprise, and provide actionable insights to business partners.
+                    The team is responsible for providing data and insights to support decision-making and improve operational efficiency.
+                
+                    <a class="font-semibold hover:text-gray-800">
+                        The key takeaways I have kept from this experience which aligned with my work term goals:
+                    </a>
+        
+                    <li>1. Digital transformation and process improvement (with technology)</li>
+                    <li>2. Developing understanding of new operational business functions for domain-specific analysis</li>
+                    <li>3. The strengths of strong entreprise strategy and workplace culture, leadership, and values</li>
+
+                </a>
+
+                <a class="pb-6 pb-8">
+                    <a class="font-semibold hover:text-gray-800">
+                        The Technologies I engaged with include:
+                    </a>
+                    <li>Cyber Security: Qualys, Aqua</li>
+                    <li>Data Engineering: Python, SQL Server, Databricks</li>
+                    <li>Reporting: Power Automate, Excel, Powerpoint, Outlook, Teams</li>
+
+                </a>
+    
+                <br>
+                <b style = "color: rgb(21, 89, 145);">
+                    This is a great space to be in, to have security experience on your resume is a great asset for any future career in data analytics or any IT or business field.
+                    - Sabrina Ambrosio, my manager
+                </b>
+                <br>
+
+
+                <h3 class="text-xl font-semibold pb-2">
+                    Learning Goal 1: LITERACY – Technological Literacy
+                </h3>
+
+                <p>
+                    Learn new technology and Cyber Security tools!
+                </p>
+
+                <h4 class="font-bold pt-4">Action Plan 1</h4>
+                <p>
+                	
+                The team uses cybersecurity tools such as Qualys & AQUA which are new to me. 
+                Using software I previously have experience in such as Python, Power BI, SQL, and Excel. 
+                I will be proactively finding opportunities to develop proficiency with these new tools. 
+                There are also opportunities to use cloud technologies such as Databricks & SQL Server.    
+                </p>
+
+                <h4 class="font-bold pt-4">Measure of Success 1</h4>
+                <p>
+                	
+                I want to be able to say on my resume at the end of the term that I was able to be functionally proficient with these tools and understand the business value of why they are used in different ways. 
+                There is dashboarding, automation, data profiling, and so many things to learn with information security. 
+                </p>
+
+                <h4 class="font-bold pt-4">Reflection 1</h4>
+                <p>
+                    After completing my work term, I can confidently say I gained a lot of experience with 
+                    these tools. Firstly, expanding on my experience with Python Automation, I was able to learn about 
+                    various enterprise and executive-level reports. 
+                    I also used Excel and SQL to manage and work with various data sources. 
+                    These technologies were introduced to me in coursework, and I was 
+                    able to expand on Continuous Improvement Initiatives in a real-world business setting.
+                </p>
+                <p>
+                    <br>I also gained hands-on experience with the Cyber Security platforms Qualys and Aqua, which are used to identify vulnerabilities and risks in the enterprise.
+                    which taught me cloud-based data management systems and documentation skills. This exposure 
+                    strengthened my technical literacy and helped me understand how these tools support enterprise 
+                    Cyber Security.
+                </p>
+
+            </div>
+        </article>
+
+
+
+        <!-- Learning Goal 2 -->
+        <article class="flex flex-col shadow my-4">
+            <div class="bg-white flex flex-col justify-start p-6">
+
+                <h2 class="text-2xl font-bold hover:text-gray-700 pb-4">
+                    The Emerging Value of Cyber Security in the Era of AI and Increasing Regulatory Compliance Expectations
+                </h2>
+
+                <p class="text-blue-700 text-sm font-bold uppercase pb-4">
+            
+                    My future career in cyber
+                </p>
+
+                <h3 class="text-xl font-semibold pb-2">
+                    Learning Goal 2:  Information Literacy – Leard about Cyber Security and the strategic value of risk management
+                </h3>
+                <p>
+                    Cyber is a new field necessary in all businesses
+                </p>
+                <br>
+                <b style = "color: rgb(224, 55, 78);">
+                AI and increasing regulatory compliance expectations are driving the need for Cyber Security and risk management.
+                - Ian Spiegel, my Sr. Director
+                </b>
+
+                <h4 class="font-bold pt-4">Action Plan 2</h4>
+                <p>
+                Building on my past coops with data, IT, business, analytics, operations, risk, etc. I want to strengthen my understanding of Cyber reporting and emerging tools relating to these new tech.
+                </p>
+
+                <h4 class="font-bold pt-4">Measure of Success 2</h4>
+                <p>
+	            One initiative I want to get in on is learning about Mythos and AI Cyber Detections and how that impacts the industry. I think CIBC is a great place to learn about cybersecurity as there are many domains and threats which are risking the bank. 
+                </p>
+
+                <h4 class="font-bold pt-4">Reflection 2</h4>
+                <p>
+                    I definitely have a stronger understanding of the strategic value of cyber to the business 
+                    now that I have heard about the emerging threat of AI and Anthropic Mythos as a Day 0 threat to the business. 
+                    I was able to sit in and listen to leadership speak about the ongoing and new trends we are seeing when it comes to having 
+                    good risk metrics as well as coordinating with stakeholders to remediate any vulnerabilities. 
+                    After having exposure to the product and risk side from my past co-ops, I think Cyber Security is an incredibly important emerging 
+                    field that will grow in the era of AI, cybersecurity, and increasing regulatory compliance expectations.
+                </p>
+            </div>
+        </article>
+
+
+
+        <!-- Goals -->
+        <article class="flex flex-col shadow my-4">
+            <div class="bg-white flex flex-col justify-start p-6">
+
+                <h2 class="text-2xl font-bold hover:text-gray-700 pb-4">
+                    PROFESSIONAL & ETHICAL BEHAVIOUR - Leadership
+                </h2>
+
+                <p class="text-blue-700 text-sm font-bold uppercase pb-4">
+                    CIBC is the place to Be! #SPARK
+                </p>
+                <b style = "color: rgb(68, 229, 213);">
+                    The culture is the strongest part of CIBC, coming from other companies, having that support is invaluable. The culture is very collaborative and supportive, and the leadership is very approachable and open to feedback. 
+                    - Global Technology Digital and AI Product Owner, fireside chat
+                </b>
+
+                <a class="font-semibold hover:text-gray-800">
+                    <br>CIBC is known for having strong values and leadership model. We had Activate Days for Summer Interns to all come together and learn about the company, the culture, and the leadership model. I was able to meet with leaders from across the organization and learn about their career journeys and how they have grown in their careers. I also learned about the importance of having a growth mindset and being open to feedback.
+
+                </a>
+                <!-- <div class="pb-6" style="height: 100px;"></div> -->
+                <br><br>
+                <h3 class="text-xl font-semibold pb-2">
+                    Learning Goal 3: PROFESSIONAL & ETHICAL BEHAVIOUR – Personal Organization / Time Management
+                </h3>
+                <p>
+                One program I want to join as a coop is the SPARK student hackathon for top emerging talent - this will help me network with executives and talent acquisition specialists and could help me land a full time return offer. 
+                </p>
+
+                <h4 class="font-bold pt-4">Action Plan 3</h4>
+                <p>
+    	        I will actively communicate with team members and my manager on how I can advance my network including having coffee chats with others in the department. I think my manager will support me with any career initiatives I want so its up to me to take the ownership of my own advancement. </p>
+                <h4 class="font-bold pt-4">Reflection 3</h4>
+                <p>
+                    I had an amazingly fantastic experience with CIBC's culture and learned so much about the 
+                    company from so many levels. I gained priceless insight and advice from leaders and colleagues 
+                    across the organization. The events organized by the SPARK and teams were phenomenal and 
+                    encouraged networking, making it easy to meet new people. This helped me continue conversations 
+                    and feel empowered to take ownership of my career. Everyone was welcoming, helpful, and made me 
+                    feel valued, which reflects why CIBC is consistently ranked one of the best workplaces in Canada.
+                </p>
+                <p>
+                    My personal and professional growth increased significantly in a short time, and I can attest to 
+                    CIBC’s commitment to investing in their talent. I even gained mentors I will continue to stay 
+                    connected with beyond my time at CIBC, and I am absolutely keeping an eye on future opportunities.
+                </p>
+
+            </div>
+        </article>
+
+
+            <!-- Conclusion & Acknowledgements -->
+            <article class="flex flex-col shadow my-4">
+                <div class="bg-white flex flex-col justify-start p-6">
+                    
+                    <a class="text-2xl font-bold hover:text-gray-700 pb-4">
+                        From Student to Professional - Next Steps in My Career Journey
+                    </a>
+                    <a class="text-blue-700 text-sm font-bold uppercase pb-4">
+                        Conclusions & Acknowledgements
+                        <!-- <br><br> -->
+                        <!-- insert end of coop presentation slides here -->
+                    </a>
+
+                    <a class="font-semibold hover:text-gray-800">
+                        Gaining exposure into Cyber Security gives 
+                        understanding of technical and interpersonal aspects of InfoSec. 
+                        It covers compliance, business collaboration, and technical data reporting.
+                        This experience has strengthened my understanding of the strategic value of data, 
+                        which is more and more important in the era of AI and increasing regulatory compliance expectations. 
+                        I am excited to continue upskilling in the data domainto grow in this field and apply my skills help teams use data to generate value.
+                        <br><br>
+                        Huge thank you to everyone at CIBC for making this such an amazing experience.
+                        From the CSO department to the campus team, leaders, colleagues, and other coops. 
+                        I am grateful to connect and learn, and hope to stay connected for the early talent conversion opportunities and beyond!
+                        
+                    </a>
+           
+                <div style = "text-align: center; padding: 50px;">
+                    <img src="images\SL pics\coop end of term ppt.png" style = "border: 5px solid rgb(25, 80, 122)">
+                </div>
+            </div>  
+        </article>
+
+        </article>
+    </div>
+
+
+
+
+    <footer class="w-full border-t bg-white pb-12">        
+        <div class="relative w-full container mx-auto flex flex-col items-center uppercase pb-6 "><br>&copy; contact me: Molinuofg@gmail.com</div>
+    </footer>
+
+
+</body>
+</html>
